@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutti Frutti — Heladería Artesanal 🍦</title>
+  <meta name="description" content="Tutti Frutti, heladería artesanal. Los sabores más ricos de la ciudad, hechos con ingredientes naturales." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== Navegación ===== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#inicio" class="logo">🍦 <span>Tutti&nbsp;Frutti</span></a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#sabores">Sabores</a>
+        <a href="#promos">Promos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#contacto" class="btn btn-primary btn-small">Pedir ahora</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="inicio">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="hero-kicker">Heladería artesanal 100% natural 🌱</p>
+        <h1>La felicidad <em>se sirve</em> en bocha</h1>
+        <p class="hero-sub">
+          Helados cremosos hechos todos los días con fruta de estación,
+          sin esencias artificiales y con muchísimo amor.
+        </p>
+        <div class="hero-actions">
+          <a href="#sabores" class="btn btn-primary">Ver sabores</a>
+          <a href="#promos" class="btn btn-secondary">Promos de hoy</a>
+        </div>
+
+        <div class="hero-stats">
+          <div><strong>+30</strong><span>sabores</span></div>
+          <div><strong>4.9★</strong><span>en reseñas</span></div>
+          <div><strong>1998</strong><span>desde el año</span></div>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="blob"></div>
+        <span class="float-item f1" style="--val:12deg">🍦</span>
+        <span class="float-item f2" style="--val:-8deg">🍓</span>
+        <span class="float-item f3" style="--val:6deg">🍨</span>
+        <span class="float-item f4" style="--val:-14deg">🍒</span>
+        <span class="float-item f5" style="--val:10deg">🥭</span>
+        <span class="float-item f6" style="--val:-5deg">🍦</span>
+      </div>
+    </div>
+
+    <div class="wave">
+      <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <path d="M0,50 C240,90 480,0 720,25 C960,50 1200,90 1440,40 L1440,90 L0,90 Z" fill="#FFF7ED"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== Sabores ===== -->
+  <section class="section sabores" id="sabores">
+    <div class="container">
+      <div class="section-head">
+        <h2>Nuestros sabores</h2>
+        <p>Frescos todos los días, elegí el tuyo 👇</p>
+      </div>
+
+      <div class="filters" role="tablist" aria-label="Filtrar sabores">
+        <button class="chip active" data-filter="todos">Todos</button>
+        <button class="chip" data-filter="cremas">Cremas</button>
+        <button class="chip" data-filter="frutas">Frutas</button>
+        <button class="chip" data-filter="especiales">Especiales</button>
+      </div>
+
+      <div class="cards" id="flavorGrid">
+        <article class="card sabor" data-cat="cremas">
+          <div class="card-icon" style="--bg:#FFE0EC">🍦</div>
+          <h3>Dulce de leche</h3>
+          <p>El clásico de siempre, denso y cremoso.</p>
+          <div class="tags"><span class="tag">Top 1 ⭐</span><span class="tag">Sin gluten</span></div>
+        </article>
+
+        <article class="card sabor" data-cat="cremas">
+          <div class="card-icon" style="--bg:#D9B08C">🍨</div>
+          <h3>Chocolate suizo</h3>
+          <p>Cacao intenso con trozos de chocolate belga.</p>
+          <div class="tags"><span class="tag">Intenso</span></div>
+        </article>
+
+        <article class="card sabor" data-cat="frutas">
+          <div class="card-icon" style="--bg:#FFC9C9">🍓</div>
+          <h3>Frutilla a la crema</h3>
+          <p>Frutillas frescas de estación y crema batida.</p>
+          <div class="tags"><span class="tag">Frutal</span></div>
+        </article>
+
+        <article class="card sabor" data-cat="frutas">
+          <div class="card-icon" style="--bg:#D8F3DC">🍋</div>
+          <h3>Limón</h3>
+          <p>Cítrico, refrescante y sin crema. Ideal para el verano.</p>
+          <div class="tags"><span class="tag">Vegano</span><span class="tag">Sin TACC</span></div>
+        </article>
+
+        <article class="card sabor" data-cat="especiales">
+          <div class="card-icon" style="--bg:#D0BFFF">🍫</div>
+          <h3>Granizado</h3>
+          <p>Chocolate con vetas de dulce de leche y almendras.</p>
+          <div class="tags"><span class="tag">Edición especial</span></div>
+        </article>
+
+        <article class="card sabor" data-cat="especiales">
+          <div class="card-icon" style="--bg:#FFF3B0">🥭</div>
+          <h3>Cheesecake</h3>
+          <p>Con base de galleta, frutos rojos y dulce de leche.</p>
+          <div class="tags"><span class="tag">Favorita</span></div>
+        </article>
+      </div>
+
+      <p class="note">🍪 Todos nuestros helados también se pueden pedir en 1/4, 1/2 y 1 kg.</p>
+    </div>
+  </section>
+
+  <!-- ===== Promos ===== -->
+  <section class="section promos" id="promos">
+    <div class="container">
+      <div class="section-head">
+        <h2>Promos de la semana</h2>
+        <p>¡No te las podés perder! 🎉</p>
+      </div>
+
+      <div class="cards">
+        <article class="card promo">
+          <span class="promo-badge">-15%</span>
+          <p class="promo-day">Lunes y martes</p>
+          <h3>2 kilos</h3>
+          <p class="price">$8.500 <small>antes $10.000</small></p>
+        </article>
+
+        <article class="card promo destacada">
+          <span class="promo-badge">2x1</span>
+          <p class="promo-day">Miércoles</p>
+          <h3>Bochas a domicilio</h3>
+          <p class="price">Pedís 1 y llevás 2</p>
+        </article>
+
+        <article class="card promo">
+          <span class="promo-badge">Combo</span>
+          <p class="promo-day">Fin de semana</p>
+          <h3>Familia feliz</h3>
+          <p class="price">$9.900 <small>1 kg + 2 cucuruchos</small></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Nosotros ===== -->
+  <section class="section nosotros" id="nosotros">
+    <div class="container nosotros-inner">
+      <div class="nosotros-text">
+        <h2>Hecho a mano, todos los días</h2>
+        <p>
+          Arrancamos en 1998 con una máquina vieja y una receta de familia.
+          Hoy seguimos batiendo cada tacho a mano, usando solo leche fresca
+          y fruta de estación. Sin atajos, sin esencias: sabor real.
+        </p>
+        <ul class="checklist">
+          <li>✅ Ingredientes 100% naturales</li>
+          <li>✅ Opciones aptas para veganos y celíacos</li>
+          <li>✅ Elaboración diaria en el local</li>
+        </ul>
+      </div>
+      <div class="nosotros-art" aria-hidden="true">
+        🍨
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contacto ===== -->
+  <section class="section contacto" id="contacto">
+    <div class="container">
+      <div class="section-head">
+        <h2>Contacto</h2>
+        <p>Escribinos o pasá por el local 🙂</p>
+      </div>
+
+      <div class="contacto-grid">
+        <form class="card form" id="contactForm" novalidate>
+          <label>
+            Nombre
+            <input type="text" name="nombre" placeholder="Tu nombre" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="tunombre@email.com" required />
+          </label>
+          <label>
+            Mensaje
+            <textarea name="mensaje" rows="4" placeholder="¿Querés hacer un pedido o una consulta?" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+          <p class="form-ok" id="formOk" hidden>¡Gracias! Te respondemos enseguida 🍦</p>
+        </form>
+
+        <div class="info">
+          <div class="card">
+            <h3>📍 Dirección</h3>
+            <p>Av. Siempreviva 742,<br />Buenos Aires, Argentina</p>
+          </div>
+          <div class="card">
+            <h3>🕒 Horarios</h3>
+            <p>Lunes a domingo<br />11:00 – 23:00 hs</p>
+          </div>
+          <div class="card">
+            <h3>📞 Teléfonos</h3>
+            <p>(011) 5555-5555<br />WhatsApp: 11 5555-5555</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-logo">🍦 Tutti Frutti</p>
+      <p class="footer-tag">Helado con sabor a infancia desde 1998 💛</p>
+      <nav class="footer-links">
+        <a href="#sabores">Sabores</a>
+        <a href="#promos">Promos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
